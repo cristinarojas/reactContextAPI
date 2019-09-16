@@ -3,6 +3,8 @@ import React, { useState, useContext } from 'react';
 import { MovieContext } from '../context/movieContext';
 
 const AddMovie = () => {
+  console.log('Enter AddMovie Component!');
+  
   // Local state
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');

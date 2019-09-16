@@ -1,5 +1,5 @@
 // Dependencies
-import React, { useState, useContext} from 'react';
+import React, { useContext} from 'react';
 
 // components
 import Movie from './movie';
@@ -8,6 +8,8 @@ import Movie from './movie';
 import { MovieContext } from '../context/movieContext';
 
 const MovieList = () => {
+    console.log('Enter MovieList Component!');
+    
   const [movies, setMovies] = useContext(MovieContext);
 
   return (
