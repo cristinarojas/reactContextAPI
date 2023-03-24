@@ -1,20 +1,26 @@
+# Workflow name
 name: Release process
+
 on:
+  # Events
   push:
     branches:
       - master
 
 jobs:
-  release:
-    name: validation
+  # Jobs
+  generate-release:
+    name: Create Github Release
+    # Runner OS
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
+      - name: Checkout repository
+        # Actions
         uses: actions/checkout@v2
-      - name: node
+      - name: Node installation
+        # Actions
         uses: actions/setup-node@v2
         with:
           node-version: 14
           registry-url: https://registry.npmjs.org
       - run: npm install
-      - run: npm run lint
