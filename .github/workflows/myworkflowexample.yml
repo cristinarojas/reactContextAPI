@@ -1,11 +1,8 @@
-name: on-pull-request
+name: Release process
 on:
   push:
     branches:
-      - "*"
-      - "*/*"
-      - "**"
-      - "!main"
+      - main
 
 jobs:
   release:
