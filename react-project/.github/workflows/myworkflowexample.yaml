@@ -1,0 +1,19 @@
+# Workflow Name
+name: Release Process
+
+on:
+  # Events
+  push:
+    branches:
+      - main
+
+jobs:
+  # Jobs
+  generate-release:
+    name: Create GitHub Release
+    # Runner OS
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        # Actions
+        uses: actions/checkout@v2
