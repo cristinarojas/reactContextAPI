@@ -2,7 +2,7 @@
 name: Release process
 
 on:
-  # Event
+  # Events
   push:
     branches:
       - master
